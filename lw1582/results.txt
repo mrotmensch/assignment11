@@ -1,0 +1,12 @@
+position: 1
+mean: 0.0198
+std: 0.999803960784
+position: 10
+mean: 0.02048
+std: 0.316866801038
+position: 100
+mean: 0.018984
+std: 0.10092654628
+position: 1000
+mean: 0.0198572
+std: 0.0320484571885
