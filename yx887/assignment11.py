@@ -10,7 +10,7 @@ def main():
     # Get position list
     while True:
         try:
-            positions = list_input('Please specify the list of positions to simulate: ', int)
+            positions = list_input('Please specify the list of positions to simulate (separated by commas): ', int)
             break
         except (InputError, ConversionError) as e:
             print e
