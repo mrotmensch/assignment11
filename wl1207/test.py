@@ -1,7 +1,7 @@
 import unittest
 import numpy as np
 from investment_simulation import investmentSimulation
-from exception_class import inValidInputException
+from exception_class import invalidInputException
 
 class test_investment_simulation(unittest.TestCase):
 	
@@ -30,8 +30,8 @@ class test_investment_simulation(unittest.TestCase):
 	
 		"""Test if function would raise exception when receive any parameters in invalid format. """
 		
-		self.assertRaises(inValidInputException,investmentSimulation,self.position2,self.num_trials1)
-		self.assertRaises(inValidInputException,investmentSimulation,self.position1,self.num_trials2)
+		self.assertRaises(invalidInputException,investmentSimulation,self.position2,self.num_trials1)
+		self.assertRaises(invalidInputException,investmentSimulation,self.position1,self.num_trials2)
 	
 	
 if __name__ == '__main__':

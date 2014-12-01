@@ -1,8 +1,9 @@
 import sys
+import numpy as np
 from investment_simulation import investmentSimulation
 from write_result import writeRes
 from simulation_plot import simulationPlot
-from exception_class import inValidInputFormat, writeInTextException, saveInPdfException
+from exception_class import invalidInputFormat, writeInTextException, saveInPdfException
 
 def main():
 	
@@ -17,6 +18,7 @@ def main():
 		Receive input from user. If the parameters are not given in a valid format, it will raise exception later. 
 		For example, input_positions is only allowed in format like '[1,2,3,4,5]',
 		either '(1,2,3,4,5]' or '(1,2,3,4,5)' will raise exception.
+		And input_num_trials should be a positive number. If a negative received, we would use its absolute value.
 		"""
 		
 		try:
@@ -31,11 +33,12 @@ def main():
 			sys.exit()
 		
 		try:
-			positions = [int(x) for x in input_positions.strip('[]').split(',')]
-			num_trials = int(input_num_trials)
+			positions = [np.abs(int(x)) for x in input_positions.strip('[]').split(',')]
+			num_trials = np.abs(int(input_num_trials))
 		except:
-			raise inValidInputFormat('Please input in given format. ')
-			
+			raise invalidInputFormat('Please input in given format. ')
+		
+		
 		try:
 			print 'Write result into a text file.'
 			try:
