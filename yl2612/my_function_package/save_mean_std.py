@@ -4,6 +4,8 @@ import numpy as np
 
 def store_mean_std(positions,num_trials):
     '''
+    receive a list of positions and a number of trials,
+    stimulate each position,
     store the mean and standard deviation of daily return in a file called results.txt.
     '''
 

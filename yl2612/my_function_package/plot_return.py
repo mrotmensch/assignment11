@@ -2,8 +2,11 @@ import matplotlib.pyplot as plt
 from simulation import simulation
 
 def daily_return_hist(positions, num_trials):
+    '''Receive a list of positions and a number of trials.
+       Plot the return of different position in histogram.
+    '''
     for position in positions:
-        daily_return = simulation(position, num_trials)
+        daily_return = simulation(position, num_trials)#calculate the return of each position
         plt.figure()
         plt.hist(daily_return, 100, range=[-1,1])
         plt.xlim(-1,1)

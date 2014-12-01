@@ -5,7 +5,9 @@ from my_function_package.validate_input import *
 import sys
 
 def main():
-    '''This program stimulates each position, plot the results, store the means and standard deviations in a text file.'''
+    '''This program get inputs from user regarding the positions and number of trials,
+       stimulates each position, plot the results, and store the means and standard deviations in a text file.
+    '''
     try:
         position_input = raw_input('Enter a list of the number of shares to buy in parallel, e.g. [1, 10, 100, 1000]: ')
         positions = get_valid_list(position_input)   #get the validated position in correct format   
