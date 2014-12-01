@@ -18,13 +18,12 @@ def get_valid_list(position):
     '''receive a list of positions, convert it a correct list format with positive integers in each position.'''
     position_num_list = []
     
-    #remove whitespace in the string    
-    get_position = position.strip()
+    get_position = position.strip()#remove whitespace in the string
     
-    #check it the list has [] format
-    if get_position[0] =='[' and get_position[-1] == ']':
-        #get the positions
-        get_position_num = get_position[1:-1].split(',')
+    
+    if get_position[0] =='[' and get_position[-1] == ']': #check it the list has [] format
+        
+        get_position_num = get_position[1:-1].split(',') #get the positions
         for num in get_position_num:
             position_num = get_valid_integer(num) #get positive integers in each position
             position_num_list.append(position_num)
