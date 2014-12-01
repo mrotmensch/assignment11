@@ -8,7 +8,7 @@ from exceptions import *
 class TestIO(unittest.TestCase):
 	def setUp(self):
 		self.df = pd.DataFrame({"x":[2,3], "y":[100, 200]})
-		self.file1 = "/out.txt"
+		self.file1 = "/test.txt"
 		self.file2 = ""
 		self.file3 = "test.txt"
 
