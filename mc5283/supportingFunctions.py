@@ -12,9 +12,7 @@ def positionInit(position):
     This function take a string of position in, and return a list of 
     integers
     '''
-    positionSplit = position.split(',')
-    positionSplit[0] = positionSplit[0].replace('[', '')
-    positionSplit[-1] = positionSplit[-1].replace(']', '')
+    positionSplit = position.strip('[()]').split(',')
 
     return [int(i) for i in positionSplit]
 

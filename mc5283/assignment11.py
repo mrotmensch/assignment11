@@ -44,7 +44,7 @@ def main():
     for i in position:
         plt.hist(daily_ret[i], 100, range = [-1,1])
         plt.savefig('histgram_' + '%04d'%(i) + '_pos.pdf', format = 'pdf')
-        plt.close
+        plt.close('all')
 
 
 if __name__ == '__main__':
