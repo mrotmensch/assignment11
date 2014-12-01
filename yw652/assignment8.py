@@ -9,29 +9,32 @@ def main():
     '''
 
     #Take inputs from the users, but the graphs are generated with given position list
-    position = raw_input("Please type a list of positions you'd like to invest")
-    position = position.split(',')
-    positions = []
+    while True:
+        try:
+            position = raw_input("Please type a list of positions you'd like to invest")
+            position = position.strip('[()]').split(',')
+            positions = []
 
-    #Raise exception if invalid input appears
-    try:
-        for position in position:
-            positions.append(int(position))
-    except:
-        raise invalidInputException
+            #Raise exception if invalid input appears
+            for position in position:
+                positions.append(int(position))
+            break
 
-    try:
-        num_trial = int(raw_input('Please enter the number of trials'))
-    except:
-        raise invalidInputException
+        except:
+            raise invalidInputException
+
+    while True:
+
+        try:
+            num_trial = int(raw_input('Please enter the number of trials'))
+            break
+        except:
+            raise invalidInputException
 
     return_list = simulation(positions, num_trial)
 
     #If there's an error with output file
-    try:
-        outputF = open('result.txt', 'w')
-    except:
-        raise outputToFileError
+    outputF = open('result1.txt', 'w')
 
     for i in range(len(return_list)):
         mean = np.mean(return_list[i])
@@ -39,6 +42,7 @@ def main():
         outputF.write("Position is " + str(positions[i]) + '\n')
         outputF.write("The mean of the return is " + str(mean)+ ', ' + "and the standard deviation is " + str(std)+"\n")
         outputF.flush()
+    outputF.close()
 
     #Generating graphs for the given positions
     target = [1,10,100,1000]
