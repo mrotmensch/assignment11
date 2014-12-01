@@ -16,7 +16,7 @@ def investmentSimulation(position, num_trials):
 	"""
 	
 	if not (isinstance(position,int) and isinstance(num_trials,int)):
-		raise inValidInputException('Input is not in a valid format, please check again. ')
+		raise inValidInputException('Function receives inputs not in a valid format, please check again. ')
 	
 	invest = 1000
 	cumu_ret = []
