@@ -3,7 +3,7 @@ from Investment import *
 from userinput import *
 
 class TestInvestment(unittest.TestCase):
-    '''tests if Investment function returns a list'''
+    '''tests if Investment function returns a dataframe with the right shape'''
     def setUp(self):
         self.position = [1,10,100,1000]
 
