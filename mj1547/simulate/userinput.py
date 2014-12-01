@@ -1,6 +1,6 @@
 
 import re
-
+from simulate.exception import *
 def num_input():
     '''
     a function to get user input of positions and num_trials, and then we can make them as position
@@ -9,10 +9,10 @@ def num_input():
     #when unput is empty, raise exception
     positions = raw_input('list of positions:\n')
     if positions == '':
-        raise Exception
+        raise InputINvaild('no input')
     num_trials = raw_input('number of trials:\n')
     if num_trials== '':
-        raise Exception
+        raise InputINvaild('no input')
     clean = re.compile(r'[^\d,]+')
     
     try:
@@ -25,6 +25,6 @@ def num_input():
         # write the num_trials as a singel int
         num_trials = int(trials_clean.replace(' ','').replace(',',''))
     except:
-        raise Exception 
+        raise CleanError('check the input again')
     # return 
     return positions,num_trials
