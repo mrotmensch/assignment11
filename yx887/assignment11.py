@@ -10,7 +10,7 @@ def main():
     # Get position list
     while True:
         try:
-            positions = list_input('Please specify the list of positions to simulate (separated by commas): ', int)
+            positions = list_input(raw_input('Please specify the list of positions to simulate (separated by commas): '), int)
             break
         except (InputError, ConversionError) as e:
             print e
@@ -19,7 +19,7 @@ def main():
     # Get number of trials input
     while True:
         try:
-            ntrials = well_input('Please specify number of trials of the simulation: ', int)
+            ntrials = well_input(raw_input('Please specify number of trials of the simulation: '), int)
             break
         except (InputError, ConversionError) as e:
             print e

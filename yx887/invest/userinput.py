@@ -1,10 +1,10 @@
 import sys, re
 from userexceptions import InputError, ConversionError
 
-def med_input(prompt, exit_flags=['quit', 'exit']):
+def med_input(input_func, exit_flags=['quit', 'exit']):
     """ Handle basic KeyboardInterrupt, EOF, and user termination. """
     try:
-        raw = raw_input(prompt)
+        raw = input_func()
     except (KeyboardInterrupt, EOFError):
         sys.exit('Interrupted')
 
@@ -15,9 +15,9 @@ def med_input(prompt, exit_flags=['quit', 'exit']):
         
     return med
 
-def well_input(prompt, required_type, exit_flags=['quit', 'exit']):
+def well_input(input_func, required_type, exit_flags=['quit', 'exit']):
     """ Convert input to required type, exit if not able to convert. """
-    med = med_input(prompt, exit_flags)
+    med = med_input(input_func, exit_flags)
     if type(required_type) != type:
         raise InputError('{} is not a type'.format(required_type))
     try:
@@ -27,9 +27,9 @@ def well_input(prompt, required_type, exit_flags=['quit', 'exit']):
 
     return well
 
-def list_input(prompt, required_type, exit_flags=['quit', 'exit']):
+def list_input(input_func, required_type, exit_flags=['quit', 'exit']):
     """ Convert user input to a list. Input needs to be separated by comma. exit if coversion fails. """
-    well = re.split('\s*,\s*', med_input(prompt, exit_flags))
+    well = re.split('\s*,\s*', med_input(input_func, exit_flags))
     if type(required_type) != type:
         raise InputError('{} is not a type'.format(required_type))
     try:
