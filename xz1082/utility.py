@@ -1,6 +1,17 @@
 import re
 from user_exceptions import * 
 
+def validInteger(string):
+    '''
+    takes an string and converts to an integer.
+    '''
+    try:
+        integer = int(string)
+    except:
+        raise InputError
+    
+    return integer
+        
 def validPositionInput(user_input):
     '''
     tests whether the user's input is in a valid list form.
@@ -12,13 +23,12 @@ def validPositionInput(user_input):
     if string[0] == '[' and string[-1] == ']':
         positions = string[1:-1].split(',')
         for position in positions:
-            if int(position):
+            if validInteger(position):
                 return True
             else:
                 return False
     else:
         return False 
-        
 
 def parsePositionInput(position_string):
     '''

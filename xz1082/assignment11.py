@@ -11,7 +11,7 @@ def main():
     position in [1,10,100,1000] in histograms 
     '''
     #take user input for a list of the number of shares to buy and put them into a list
-    positions_input = raw_input('a list of the number of shares to buy in parallel: e.g. [1, 10, 100, 1000]? ')
+    positions_input = raw_input('a list of numbers of shares to buy in parallel: e.g. [1, 10, 100, 1000]? ')
     positions = parsePositionInput(positions_input)  
     #take user input for the number of times to repeat the test
     try:

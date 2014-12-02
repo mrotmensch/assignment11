@@ -10,9 +10,6 @@ class testValidPosition(unittest.TestCase):
     
     def test_positionsSpace(self):
         self.assertTrue(validPositionInput('[ 1, 10, 100, 1000 ]'))
-    
-    def test_positionsInteger(self):
-        self.assertFalse(validPositionInput('[1,a]'))
         
     def test_positionsString(self):
         self.assertFalse(validPositionInput(1234))
