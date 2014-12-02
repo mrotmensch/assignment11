@@ -41,8 +41,4 @@ def parsePositions(positions_input):
     else:
         raise invalidPositionsException
 
-#print validNumTrialCheck('-1')
-#print parsePositions('3,efg')
 
-#p = re.compile('^\s*\[\d\s*[,\s*\d]*\]\s*$')
-#print (p.search('[4,7]'))

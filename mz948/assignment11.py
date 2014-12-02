@@ -12,7 +12,7 @@ def main():
     # establish global variables
     positions_input = raw_input('a list of the number of shares to buy in parallel: e.g. [1, 10, 100, 1000]')
     positions = parsePositions(positions_input)
- #sdf   positions = [int(x) for x in positions_input.strip('[]').split(',')]
+ 
     num_trials = raw_input('How many times to randomly repeat the test')
     if validNumTrialCheck(num_trials):
         num_trials = int(num_trials)
