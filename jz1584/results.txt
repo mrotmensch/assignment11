@@ -1,0 +1,16 @@
+
+
+Some basic statistics of the daily return for  position of 1:
+ expected value: 0.0266, standard deviation:0.999646157398 
+
+
+Some basic statistics of the daily return for  position of 10:
+ expected value: 0.01918, standard deviation:0.314496625737 
+
+
+Some basic statistics of the daily return for  position of 100:
+ expected value: 0.019528, standard deviation:0.0993696996876 
+
+
+Some basic statistics of the daily return for  position of 1000:
+ expected value: 0.020055, standard deviation:0.0315998825156 
