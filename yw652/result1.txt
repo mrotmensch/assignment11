@@ -1,0 +1,8 @@
+Position is 1
+The mean of the return is 0.0, and the standard deviation is 1.0
+Position is 34
+The mean of the return is 0.0498, and the standard deviation is 0.189634279602
+Position is 555
+The mean of the return is -0.4338, and the standard deviation is 0.0221169618167
+Position is 3
+The mean of the return is -0.001, and the standard deviation is 0.614021660856
