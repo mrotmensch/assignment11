@@ -1,0 +1,4 @@
+When position is 1:
+mean average daily return is: 0.0202  and the standard deviation: 0.999795959184
+When position is 10:
+mean average daily return is: 0.01918  and the standard deviation: 0.319355800949

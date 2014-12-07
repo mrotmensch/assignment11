@@ -1,0 +1,8 @@
+Position is: 1
+Mean: 0.013  Std: 0.99991549643
+Position is: 10
+Mean: 0.0209  Std: 0.316883559056
+Position is: 100
+Mean: 0.021244  Std: 0.0999234330075
+Position is: 1000
+Mean: 0.0196692  Std: 0.0315030692371
