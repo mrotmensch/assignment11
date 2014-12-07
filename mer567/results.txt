@@ -1,0 +1,20 @@
+Statistics for normalized daily returns for 1000 days 
+ with 1 parallel investments per day 
+mean: -0.012 
+standard deviation 0.999927997408 
+
+Statistics for normalized daily returns for 1000 days 
+ with 10 parallel investments per day 
+mean: 0.0148 
+standard deviation 0.313082992192 
+
+Statistics for normalized daily returns for 1000 days 
+ with 100 parallel investments per day 
+mean: 0.01814 
+standard deviation 0.100132614068 
+
+Statistics for normalized daily returns for 1000 days 
+ with 1000 parallel investments per day 
+mean: 0.018284 
+standard deviation 0.0316271931097 
+
